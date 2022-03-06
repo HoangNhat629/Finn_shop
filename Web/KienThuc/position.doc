@@ -1,0 +1,30 @@
+Có 5 giá trị chính của position:
+position: static | relative | absolute | fixed | sticky
+Và các thuộc tính Helper có nhiệm vụ căn chỉnh vị trí của element: top | right | bottom | left | z-index
+
+*Note: các thuộc tính Helper không thể hoạt động nếu như không khai báo thuộc tính position, hoặc với position: static.
+(chiều cao (height) và chiều rộng (width) (x,y) là 2 chiều của element. Z chính là chiều thứ 3 của element. Một element 
+hiện thị đè lên trên một element khác có nghĩa là giá trị z-index của nó đã được tăng)
+
+1. Static
+position: static là giá trị mặc định của position. Dù chúng ta có khai báo chúng hay không thì các element sẽ được sắp 
+xếp vị trí một cách như bình thường trên trang web.( không bị ảnh hưởng bởi các thuộc tính trên cùng, dưới cùng, trái 
+và phải.)
+
+2. Relative
+position: relative: Vị trí mới của một element tương quan/ liên hệ tới vị trí mặc định của nó.
+Với position: relative và các giá trị khác ngoài static, chúng ta có thể dễ dàng thay đổi vị trí của chúng. Nhưng chỉ 
+khai báo position: relative thôi chưa đủ, chúng ta cần đến việc điều chỉnh vị trí của element bằng các thuộc tính helper.
+
+3. Absolute
+Với position: relative, một element được dịch chuyển tới một vị trí mới dựa trên ví trí bình thường của chính nó. Tuy 
+nhiên, position: absolute sẽ dịch chuyển vị trí của nó tương ứng với thẻ cha của nó
+
+4.fixed 
+Phần tử với position: fixed;được định vị so với chế độ xem, có nghĩa là nó luôn ở cùng một vị trí ngay cả khi trang được 
+cuộn. Các thuộc tính trên cùng, phải, dưới cùng và bên trái được sử dụng để định vị phần tử.
+
+5.sticky 
+Một phần tử với position: sticky;được định vị dựa trên vị trí cuộn của người dùng.
+Một phần tử cố định chuyển đổi giữa relativevà fixed, tùy thuộc vào vị trí cuộn. Nó được định vị tương đối cho đến khi 
+gặp vị trí bù nhất định trong khung nhìn - sau đó nó "dính" đúng vị trí (như vị trí: fixed).

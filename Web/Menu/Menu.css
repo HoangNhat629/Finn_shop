@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: #dcdcdc;
+}
+header {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+#cart-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#cart-icon:after {
+  content: attr(value);
+  font-size: 8px;
+  color: #fff;
+  background: #6667ab;
+  border-radius: 50%;
+  padding: 6px 6px;
+  position: relative;
+  left: -11px;
+  top: 5px;
+  opacity: 0.9;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 50vh;
+  max-height: 90vh;
+  padding: 20px;
+  background: #fff;
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  overflow: auto;
+  transition: 0.3s;
+}
+.cart.active {
+  right: 0;
+  background: #fff;
+}
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.cart-price {
+  font-weight: 500;
+}
+.cart-quantity {
+  border: 1px solid #171427;
+  outline-color: #e21a3b;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.cart-remove {
+  font-size: 24px;
+  color: #cc354d;
+  cursor: pointer;
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid #171427;
+}
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.total-price {
+  margin-left: 0.5rem;
+}
+.btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: #6c1ead;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-buy:hover {
+  background: #231033;
+}
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 1.25rem;
+  color: #6c1ead;
+  cursor: pointer;
+}
+section {
+  padding: 20px;
+  width: 1280px;
+  margin: 10px auto;
+}
+section .Portfolio {
+  display: flex;
+  margin-bottom: 10px;
+}
+section .Portfolio li {
+  list-style: none;
+  background: #eee;
+  padding: 8px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+section .Portfolio li.active {
+  background: #03a9f4;
+  color: #fff;
+}
+.container {
+  position: relative;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.container .card {
+  width: 100%;
+  background: #fff;
+}
+.container .card .imgBx {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+}
+.container .card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+}
+.container .card:hover .imgBx img {
+  transform: scale(1.5);
+}
+.action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.action li {
+  position: relative;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: translateX(60px);
+}
+.action li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.action li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.container .card:hover .action li {
+  transform: translateX(0px);
+}
+.action li:hover {
+  background-color: #ff2020;
+  color: #fff;
+}
+.action li span {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(20px);
+  white-space: nowrap;
+  padding: 4px 60px;
+  background-color: #fff;
+  color: #333;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+.action li:hover span {
+  transform: translateY(-50%) translateX(0px);
+  opacity: 1;
+}
+.action li span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+.container .card .content {
+  padding: 10px;
+}
+.container .card .content .productName h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 5px 0;
+}
+.container .card .content .price_rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .card .content .price_rating h2 {
+  font-size: 20px;
+  color: #ff2020;
+  font-weight: 500;
+}
+.container .card .content .price_rating .fa-solid {
+  color: #ffd513;
+  cursor: pointer;
+}
+.container .card .content .price_rating .fa-solid.grey {
+  color: #ccc;
+}
+.pagination {
+  text-align: center;
+  margin: 30px 30px 60px;
+  user-select: none;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+.pagination li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 45px;
+}
+
+.previous-page,
+.next-page {
+  background: #6667ab;
+  width: 80px;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.previous-page:hover {
+  transform: translateX(-5px);
+}
+
+.next-page:hover {
+  transform: translateX(5px);
+}
+
+.current-page,
+.dots {
+  background: #ccc;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
+  background: #6667ab;
+}
+
+.disable {
+  background: #ccc;
+}

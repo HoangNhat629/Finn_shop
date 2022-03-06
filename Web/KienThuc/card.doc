@@ -1,0 +1,110 @@
+1) Basic
+Thẻ	Mô tả chức năng
+<!DOCTYPE>	Xác định cho trình duyệt biết phiên bản HTML mà bạn đang sử dụng
+<html>	Xác định một tài liệu HTML
+<head>	Xác định phần đầu của tài liệu HTML
+(chứa các thẻ cung cấp thông tin cho trang web)
+<title>	Xác định tiêu đề của trang web
+<body>	Xác định phần thân của tài liệu HTML
+(chứa những phần tử sẽ được hiển thị lên màn hình trình duyệt)
+<h1> - <h6>	Tạo những đề mục quan trọng trong trang web
+<p>	Xác định một đoạn văn bản
+<br>	Chèn một ngắt xuống dòng
+<hr>	Tạo một đường kẻ phân cách nằm ngang
+<!-- -->	Xác định một đoạn chú thích
+
+2) Formatting
+Thẻ	Mô tả chức năng
+<abbr>	Định nghĩa một từ viết tắt
+<address>	Xác định thông tin liên hệ của tác giả (hoặc chủ sở hữu) trang web
+<b>	Xác định đoạn văn bản được in đậm
+<bdo>	Điều hướng một đoạn văn bản được chỉ định
+<big>	Xác định một đoạn văn bản có kích thước chữ to hơn văn bản bình thường
+<blockquote>	Xác định một "đoạn trích dẫn" từ một website khác
+<code>	Xác định một đoạn văn bản mang ý nghĩa là các mã lệnh
+<del>	Tạo một đường kẻ ngang lên văn bản
+<em>	Xác định một đoạn văn bản được định dạng kiểu chữ in nghiêng
+<i>	Xác định một đoạn văn bản được định dạng kiểu chữ in nghiêng
+<ins>	Tạo một đường gạch chân lên văn bản
+<kbd>	Xác định một từ (hoặc cụm từ) mang ý nghĩa là một phím hoặc tổ hợp phím
+<mark>	Đánh dấu màu nền nổi bật cho văn bản
+<meter>	Tạo phần tử có ý nghĩa giống như: thước đo, ổ đĩa, ....
+<pre>	Giúp cho nội dung mà bạn muốn hiển thị lên màn hình được giữ nguyên định dạng giống như trong lúc soạn thảo
+<progress>	Tạo một thanh tiến trình
+<q>	Xác định một câu trích dẫn ngắn
+<s>	Tạo một đường kẻ ngang lên văn bản
+<small>	Xác định một đoạn văn bản có kích thước chữ nhỏ hơn văn bản bình thường
+<strong>	Xác định đoạn văn bản được in đậm
+<sub>	Tạo văn bản có kích thước nhỏ, nằm ở khoảng nửa dưới văn bản bình thường
+<sup>	Tạo văn bản có kích thước nhỏ, nằm ở khoảng nửa trên văn bản bình thường
+<time>	Đánh dấu những phần văn bản là: thời gian, ngày tháng, ngày lễ, ....
+<u>	Tạo một đường gạch chân lên văn bản
+<wbr>	 Ngắt bớt ký tự của một từ xuống dòng.(trong trường hợp chiều rộng của phần tử không đủ để chứa hết từ đó)
+
+3) Frames
+Thẻ	Mô tả chức năng
+<frame>	Xác định một khung trong một bộ khung
+<frameset>	Xác định một bộ khung
+<noframes>	Xác định một nội dung sẽ được hiển thị khi trình duyệt không hỗ trợ thẻ <frame>
+<iframe>	Nhúng một trang web khác vào trang web hiện tại
+
+4) Images
+Thẻ	Mô tả chức năng
+<img>	Chèn hình ảnh vào trang web
+<map> & <area>	Tạo một bản đồ ảnh
+<figcaption>	Tạo một tiêu đề cho nội dung được đặt bên trong phần tử <figure>
+<figure>	Xác định một nội dung cần được tách biệt rõ ràng
+
+5) Audio / Video
+Thẻ	Mô tả chức năng
+<audio>	Tạo một "trình phát nhạc" cho trang web
+<source>	Chỉ định tài nguyên cho trình nghe nhạc hoặc trình xem phim
+<track>	Chèn một bản phụ đề vào video
+<video>	Tạo một "trình xem phim" cho trang web
+
+6) Links
+Thẻ	Mô tả chức năng
+<a>	Tạo một liên kết đến một tài liệu nào đó (khi người dùng bấm vào liên kết thì sẽ được chuyển đến tài liệu đó)
+<nav>	Xác định một tập hợp các liên kết & thường được sử dụng kết hợp với CSS để tạo một thanh menu
+
+7) Lists
+Thẻ	Mô tả chức năng
+<ul>	Xác định một danh sách không có thứ tự
+<ol>	Xác định một danh sách có thứ tự
+<li>	Xác định một "danh mục" trong danh sách
+
+8) Tables
+Thẻ	Mô tả chức năng
+<table>	Xác định phần tử là một cái bảng
+<caption>	Tạo tiêu đề cho bảng
+<th>	Xác định phần tử là một ô tiêu đề trong hàng
+<tr>	Xác định phần tử là một hàng trong bảng
+<td>	Xác định phần tử là một ô trong hàng
+<thead>	Xác định những dòng nào thuộc "phần đầu" của bảng
+<tbody>	Xác định những dòng nào thuộc "phần thân" của bảng
+<tfoot>	Xác định những dòng nào thuộc "phần chân" của bảng
+
+9) Styles and Semantics
+Thẻ	Mô tả chức năng
+<style>	Dùng để làm thùng chứa cho các đoạn mã CSS
+<div>	Nhóm các phần tử lại với nhau để tiện cho việc định dạng cũng như thiết kế bố cục của trang web
+<span>	Nhóm các phần tử nội tuyến lại với nhau để tiện cho việc định dạng CSS
+<header>	Xác định phần đầu của trang web
+<footer>	Xác định phần chân của trang web
+<main>	Xác định phần thân của trang web
+<dialog>	Tạo một hộp thoại
+<summary> & <details>	Tạo phần tử có dạng: "chỉ hiển thị tiêu đề còn chi tiết bị ẩn, khi bấm vào tiêu đề thì chi tiết mới hiển thị"
+
+10) Meta Info
+Thẻ	Mô tả chức năng
+<head>	Xác định phần đầu của tài liệu HTML (chứa các thẻ cung cấp thông tin cho trang web)
+<meta>	Cung cấp thêm "thông tin về trang web" cho trình duyệt và các công cụ tìm kiếm
+<base>	Xác định "đường dẫn cơ sở" trong trang web và kiểu mở liên kết mặc định
+
+11) Programming
+Thẻ	Mô tả chức năng
+<script>	Dùng để làm thùng chứa cho các câu lệnh JavaScript
+<noscript>	Xác định một nội dung HTML sẽ được hiển thị khi trình duyệt không hỗ trợ JavaScript hoặc đã tắt JavaScript
+<embed>	Dùng để nhúng một "tài liệu" nào đó vào trang web
+<object>	Dùng để nhúng một "tài liệu" nào đó vào trang web
+<section> Xác định một phần trong tài liệu

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu Games</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="MenuGame.css" />
+  </head>
+</html>
+<body>
+  <header>
+    <a href="../HomePage/HomePage.html" class="logo">Finn</a>
+    <ul>
+      <li><a>You can relieve all your stress in here</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>GAME 1</h2>
+        <p>MENJA</p>
+        <bottom class="bottom" onclick="Game1()">PLAY</bottom>
+      </div>
+    </div>
+
+    <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>GAME 2</h2>
+        <p>PLANET DEFENSE <br />GAME</p>
+        <bottom class="bottom" onclick="PlanetDefenseGame()">PLAY</bottom>
+      </div>
+    </div>
+
+    <div class="box">
+      <span></span>
+      <div class="content">
+        <h2>GAME 3</h2>
+        <p>SNAKE</p>
+        <bottom class="bottom" onclick="Snake()">PLAY</bottom>
+      </div>
+    </div>
+  </div>
+  <script>
+    function Game1() {
+      window.location.href = "../Games/Menja/Game1.html";
+    }
+    function Snake() {
+      window.location.href = "../Games/Snake/Snake.html";
+    }
+    function PlanetDefenseGame() {
+      window.location.href =
+        "../Games/PlanetDefenseGame/PlanetDefenseGame.html";
+    }
+  </script>
+</body>

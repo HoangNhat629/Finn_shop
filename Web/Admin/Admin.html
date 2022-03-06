@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="Admin.css" />
+  </head>
+</html>
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="snow-outline"></ion-icon></span>
+            <span class="title">Finn</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#main">
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#details">
+            <span class="icon"
+              ><ion-icon name="person-circle-outline"></ion-icon
+            ></span>
+            <span class="title">Customers</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="icon"
+              ><ion-icon name="chatbubble-ellipses-outline"></ion-icon
+            ></span>
+            <span class="title">Messages</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+            <span class="title">Helps</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="icon"
+              ><ion-icon name="settings-outline"></ion-icon
+            ></span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="icon"
+              ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+            <span class="title">Password</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../HomePage/HomePage.html">
+            <span class="icon"
+              ><ion-icon name="log-out-outline"></ion-icon
+            ></span>
+            <span class="title">Sign out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main -->
+    <div class="main" id="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <!--search-->
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here" />
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+        <!--userImg-->
+        <div class="user">
+          <img src="./img/1.jpg" />
+        </div>
+      </div>
+
+      <!--cards-->
+      <div class="cardBox">
+        <div class="card">
+          <div>
+            <div class="numbers">1.504</div>
+            <div class="cardName">Daily Views</div>
+          </div>
+          <div class="iconBx"><ion-icon name="eye-outline"></ion-icon></div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">80</div>
+            <div class="cardName">Sales</div>
+          </div>
+          <div class="iconBx"><ion-icon name="cart-outline"></ion-icon></div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">284</div>
+            <div class="cardName">Comments</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">$75,201</div>
+            <div class="cardName">Earning</div>
+          </div>
+          <div class="iconBx">
+            <ion-icon name="cash-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <!--Chart-->
+      <div class="graphBox">
+        <div class="box">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="box">
+          <canvas id="earning"></canvas>
+        </div>
+      </div>
+      <!--data list-->
+      <div class="details" id="details">
+        <div class="recentOrders">
+          <div class="cardHeader">
+            <h2>Recent Orders</h2>
+            <a href="#" class="'btn">View All</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Payment</td>
+                <td>Status</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Converse The 10 Chuck Taylor Nike x OFF-White</td>
+                <td>$1,794.00</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+
+              <tr>
+                <td>Jordan x Dior Air Jordan 1 High sneakers</td>
+                <td>$23,512</td>
+                <td>Paid</td>
+                <td><span class="status progress">InProgress</span></td>
+              </tr>
+
+              <tr>
+                <td>Size x Vans Sk8Hi VN0A38GF00X</td>
+                <td>$144.00</td>
+                <td>Due</td>
+                <td><span class="status return">Return</span></td>
+              </tr>
+
+              <tr>
+                <td>Size x Vans Sk8Hi VN0A38GF00X</td>
+                <td>$144.00</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+
+              <tr>
+                <td>
+                  Vans Old Skool Disney The Nightmare Before Christmas
+                  VN0A4BV5TPJ
+                </td>
+                <td>$114,60</td>
+                <td>Due</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+
+              <tr>
+                <td>Converse Archive Paint Splatter Chuck 70 Sneakers</td>
+                <td>$114.87</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+
+              <tr>
+                <td>Nike Air Yeezy</td>
+                <td>$25,115</td>
+                <td>Paid</td>
+                <td><span class="status progress">InProgress</span></td>
+              </tr>
+
+              <tr>
+                <td>Nike X Off-White The 10th: Nike Air Force 1 Low</td>
+                <td>$954</td>
+                <td>Paid</td>
+                <td><span class="status progress">InProgress</span></td>
+              </tr>
+
+              <tr>
+                <td>Balenciaga Runner bicolour sneakers</td>
+                <td>$1,195</td>
+                <td>Paid</td>
+                <td><span class="status return">Return</span></td>
+              </tr>
+
+              <tr>
+                <td>Nike X Off-White The 10th: Nike Air Force 1 Low</td>
+                <td>$954</td>
+                <td>Due</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+
+              <tr>
+                <td>Nike Air Mag</td>
+                <td>$26,718</td>
+                <td>Paid</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+
+              <tr>
+                <td>
+                  Vans Old Skool 'Forgotten Bones' Black/True White VN0A4BV5V8V
+                </td>
+                <td>$113.00</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+
+              <tr>
+                <td>Converse The 10 Chuck Taylor Nike x OFF-White</td>
+                <td>$1,794.00</td>
+                <td>Due</td>
+                <td><span class="status progress">InProgress</span></td>
+              </tr>
+
+              <tr>
+                <td>Size x Vans Sk8Hi VN0A38GF00X</td>
+                <td>$144.00</td>
+                <td>Due</td>
+                <td><span class="status delivered">Delivered</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--New Customers-->
+        <div class="recentCustomers">
+          <div class="cardHeader">
+            <h2>Recent Customers</h2>
+          </div>
+          <table>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/2.jpg" /></div>
+              </td>
+              <td>
+                <h4>David<br /><span>Italy</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/3.jpg" /></div>
+              </td>
+              <td>
+                <h4>John<br /><span>US</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/4.jpg" /></div>
+              </td>
+              <td>
+                <h4>Mixxy<br /><span>IsLand</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/5.jpg" /></div>
+              </td>
+              <td>
+                <h4>Huang<br /><span>China</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/6.jpg" /></div>
+              </td>
+              <td>
+                <h4>Hai<br /><span>VietNam</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/7.jpg" /></div>
+              </td>
+              <td>
+                <h4>Michael<br /><span>America</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/8.jpg" /></div>
+              </td>
+              <td>
+                <h4>Jame<br /><span>England</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="./img/9.jpg" /></div>
+              </td>
+              <td>
+                <h4>Sam<br /><span>Italy</span></h4>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script src="Admin.js"></script>
+</body>

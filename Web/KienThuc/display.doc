@@ -1,0 +1,49 @@
+1. inline: Hiển thị một phần tử dưới dạng phần tử nội tuyến (như <span>). Mọi thuộc tính chiều cao và chiều rộng sẽ 
+  không có hiệu lực
+
+2. block: Hiển thị một phần tử dưới dạng phần tử khối (như <p>). Nó bắt đầu trên một dòng mới và chiếm toàn bộ chiều 
+   rộng
+
+3. contents: Làm cho vùng chứa biến mất, làm cho các phần tử con là phần tử con của phần tử lên cấp tiếp theo trong DOM
+
+4. flex: Hiển thị một phần tử dưới dạng vùng chứa linh hoạt cấp khối
+
+5. grid: Hiển thị một phần tử dưới dạng vùng chứa lưới cấp khối
+
+6. inline-block: Hiển thị một phần tử dưới dạng vùng chứa khối cấp nội tuyến. Bản thân phần tử được định dạng là phần tử 
+   nội tuyến, nhưng bạn có thể áp dụng các giá trị chiều cao và chiều rộng
+
+7. inline-flex: Hiển thị một phần tử dưới dạng một vùng chứa linh hoạt cấp nội tuyến
+
+8. inline-grid: Hiển thị một phần tử dưới dạng vùng chứa lưới cấp nội tuyến
+
+9. inline-table: Phần tử được hiển thị dưới dạng bảng cấp nội tuyến
+
+10. list-item: Để phần tử hoạt động giống như một phần tử <li>
+
+11. run-in: Hiển thị một phần tử dưới dạng khối hoặc nội dòng, tùy thuộc vào ngữ cảnh
+
+12. table: Để phần tử hoạt động giống như một phần tử <table>
+
+13. table-caption: Let the element behave like a <caption> element
+
+14. table-column-group: Let the element behave like a <colgroup> element
+
+15.  table-header-group: Let the element behave like a <thead> element
+
+16. table-footer-group: Let the element behave like a <tfoot> element
+
+17. table-row-group: Let the element behave like a <tbody> element
+
+18.  table-cell: Let the element behave like a <td> element
+
+19. table-column: Let the element behave like a <col> element
+
+20. table-row: Let the element behave like a <tr> element
+
+21. none: Phần tử bị loại bỏ hoàn toàn
+
+22. initial: Đặt thuộc tính này thành giá trị mặc định của nó. 
+
+23. inherit: Kế thừa thuộc tính này từ phần tử mẹ của nó
+

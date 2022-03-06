@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="Contact.css" />
+  </head>
+</html>
+<body>
+  <section>
+    <div class="container">
+      <h2>CONTACT US</h2>
+
+      <div class="row100">
+        <div class="col">
+          <div class="inputBox">
+            <input type="text" name="" required="required" id="First_Name" />
+            <span class="text">First Name</span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="inputBox">
+            <input type="text" name="" required="required" id="Last_Name" />
+            <span class="text">Last Name</span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="inputBox">
+            <input type="text" name="" required="required" id="email" />
+            <span class="text">Email</span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="inputBox">
+            <input
+              type="text"
+              name=""
+              required="required"
+              id="mobile"
+              onkeypress="return isNum(event)"
+            />
+            <span class="text">Mobile</span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row100">
+        <div class="col">
+          <div class="inputBox textarea">
+            <textarea required="required" id="mess"></textarea>
+            <span class="text">Type Your Message Here.....</span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row100">
+        <div class="col">
+          <input
+            type="submit"
+            value="BACK"
+            onclick="Back();"
+            onkeypress="return onlyNumberKey(event)"
+          />
+        </div>
+        <div class="col">
+          <input type="submit" value="SEND" onclick="Send();" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function Back() {
+        window.location.href = "../HomePage/HomePage.html";
+      }
+      function Send() {
+        var First_Name = document.getElementById("First_Name").value;
+        var Last_Name = document.getElementById("Last_Name").value;
+        var email = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
+        var mess = document.getElementById("mess").value;
+        if (
+          First_Name == "" &&
+          Last_Name == "" &&
+          email == "" &&
+          mobile == "" &&
+          mess == ""
+        ) {
+          var result = confirm("ERROR!");
+          return false;
+        } else if (First_Name == "" || Last_Name == "") {
+          var result = confirm("Bạn Chưa Nhập Tên Kìa!");
+          return false;
+        } else if (email == "") {
+          var result = confirm("Bạn Chưa Nhập Mail!");
+          return false;
+        } else if (mobile == "") {
+          var result = confirm("Bạn Chưa Nhập Số Điện Thoại!");
+          return false;
+        } else if (mess == "") {
+          var result = confirm("Thông Điệp Bạn Muốn Gửi Chúng Tôi Là Gì????!");
+          return false;
+        } else {
+          var result = confirm("Thông Điệp Đã Được Gửi!");
+          location.reload();
+          return true;
+        }
+      }
+      function isNum(event) {
+        var keycode = event.keyCode;
+        if (keycode > 48 && keycode < 57) {
+          return true;
+        }
+        return false;
+      }
+    </script>
+  </section>
+</body>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+  </head>
+</html>
+<body>
+  <header>
+    <a href="../HomePage/HomePage.html" class="logo">Finn</a>
+    <ul>
+      <li><a href="../HomePage/HomePage.html">Home</a></li>
+      <li><a href="../Login.html">Login</a></li>
+      <li><a href="../Contact/Contact.html">Contact</a></li>
+      <li clas="note">
+        <i class="fa-solid fa-bag-shopping" id="cart-icon" value="*"></i>
+      </li>
+    </ul>
+    <div class="cart">
+      <h2 class="cart-title">Your Cart</h2>
+      <div class="cart-content">
+        <!-- <div class="cart-box">
+          <img src="./Pictures/1.jpg" class="cart-img" />
+          <div class="detail-box">
+            <div class="cart-product-title">
+              Converse The 10 Chuck Taylor Nike x OFF-White
+            </div>
+            <div class="cart-price">$1794.00</div>
+            <input type="number" value="1" class="cart-quantity" />
+          </div>
+          <i class="fa-solid fa-trash-can cart-remove"></i>
+        </div> -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total:</div>
+        <div class="total-price">0$</div>
+      </div>
+      <button type="button" class="btn-buy">Buy Now</button>
+      <i class="fa-solid fa-x" id="close-cart"></i>
+    </div>
+  </header>
+  <section>
+    <ul class="Portfolio">
+      <li class="list active" data-filter="All">All</li>
+      <li class="list" data-filter="Converse">Converse</li>
+      <li class="list" data-filter="Vans">Vans</li>
+      <li class="list" data-filter="Nike">Nike</li>
+      <li class="list" data-filter="Adidas">Adidas</li>
+      <li class="list" data-filter="Gucci">Gucci</li>
+      <li class="list" data-filter="Dolce">Dolce</li>
+      <li class="list" data-filter="Balenciaga">Balenciaga</li>
+    </ul>
+    <div class="container" style="display: none">
+      <div class="card Converse">
+        <div class="imgBx">
+          <img src="./Pictures/1.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/1.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Converse The 10 Chuck Taylor Nike x OFF-White
+              </h3>
+              <h2 class="product-price" style="display: none">$1794.00</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="1"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Converse The 10 Chuck Taylor Nike x OFF-White</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$1794.00</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Nike">
+        <div class="imgBx">
+          <img src="./Pictures/2.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/2.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Jordan x Dior Air Jordan 1 High sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$23512</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="2"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Jordan x Dior Air Jordan 1 High sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$23512</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Vans">
+        <div class="imgBx">
+          <img src="./Pictures/3.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/3.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Vans Mule Old Skool Pattern Mix Multi
+              </h3>
+              <h2 class="product-price" style="display: none">$81.54</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="3"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Vans Mule Old Skool Pattern Mix Multi</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$81.54</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid grey fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Vans">
+        <div class="imgBx">
+          <img src="./Pictures/4.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/4.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Vans The Nightmare Before Christmas x Sk8-Hi 'Jacks Lament'
+                Jacks Lament/Nightmare
+              </h3>
+              <h2 class="product-price" style="display: none">$117.00</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="4"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>
+              Vans The Nightmare Before Christmas x Sk8-Hi 'Jacks Lament' Jacks
+              Lament/Nightmare
+            </h3>
+          </div>
+          <div class="price_rating">
+            <h2>$117.00</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Converse">
+        <div class="imgBx">
+          <img src="./Pictures/5.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/5.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Converse Archive Paint Splatter Chuck 70 Sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$114.87</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="5"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Converse Archive Paint Splatter Chuck 70 Sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$114.87</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid grey fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Vans">
+        <div class="imgBx">
+          <img src="./Pictures/6.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/6.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Size x Vans Sk8Hi VN0A38GF00X
+              </h3>
+              <h2 class="product-price" style="display: none">$114.00</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="6"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Size x Vans Sk8Hi VN0A38GF00X</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$144.00</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Vans">
+        <div class="imgBx">
+          <img src="./Pictures/7.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/7.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Vans Old Skool 'Forgotten Bones' Black/True White VN0A4BV5V8V
+              </h3>
+              <h2 class="product-price" style="display: none">$113.00</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="7"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>
+              Vans Old Skool 'Forgotten Bones' Black/True White VN0A4BV5V8V
+            </h3>
+          </div>
+          <div class="price_rating">
+            <h2>$113.00</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Vans">
+        <div class="imgBx">
+          <img src="./Pictures/8.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/8.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Vans Old Skool Disney The Nightmare Before Christmas VN0A4BV5TPJ
+              </h3>
+              <h2 class="product-price" style="display: none">$114.60</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="8"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>
+              Vans Old Skool Disney The Nightmare Before Christmas VN0A4BV5TPJ
+            </h3>
+          </div>
+          <div class="price_rating">
+            <h2>$114.60</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Nike">
+        <div class="imgBx">
+          <img src="./Pictures/9.webp" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/9.webp"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">Nike Air Mag</h3>
+              <h2 class="product-price" style="display: none">$26718</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="9"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Nike Air Mag</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$26718</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Nike">
+        <div class="imgBx">
+          <img src="./Pictures/10.webp" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/10.webp"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Nike Air Yeezy
+              </h3>
+              <h2 class="product-price" style="display: none">$25115</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="10"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Nike Air Yeezy</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$25115</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Adidas">
+        <div class="imgBx">
+          <img src="./Pictures/11.webp" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/11.webp"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Foam RNNR “MXT Moon Grey” sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$472</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="11"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Foam RNNR “MXT Moon Grey” sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$472</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid grey fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Adidas">
+        <div class="imgBx">
+          <img src="./Pictures/12.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/12.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                YEEZY Boost 350 V2 “MX Rock” sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$279</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="12"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>YEEZY Boost 350 V2 “MX Rock” sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$279</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Gucci">
+        <div class="imgBx">
+          <img src="./Pictures/13.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/13.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Rhyton-logo leather sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$1125</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="13"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Rhyton-logo leather sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$1125</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid grey fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Dolce">
+        <div class="imgBx">
+          <img src="./Pictures/14.webp" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/14.webp"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Dolce & Gabbana Sorrento Classic knit sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$586</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="14"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Dolce & Gabbana Sorrento Classic knit sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$586</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Adidas">
+        <div class="imgBx">
+          <img src="./Pictures/15.jpg" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/15.jpg"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Nike X Off-White The 10th: Nike Air Force 1 Low
+              </h3>
+              <h2 class="product-price" style="display: none">$954</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="15"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Nike X Off-White The 10th: Nike Air Force 1 Low</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$954</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card Balenciaga">
+        <div class="imgBx">
+          <img src="./Pictures/16.webp" />
+          <ul class="action">
+            <li>
+              <i class="fa-solid fa-heart"></i>
+              <span>Add to Wishlist</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping add-cart"></i>
+              <span>Add to Cart</span>
+              <img
+                src="./Pictures/16.webp"
+                style="display: none"
+                class="product-img"
+              />
+              <h3 class="product-title" style="display: none">
+                Balenciaga Runner bicolour sneakers
+              </h3>
+              <h2 class="product-price" style="display: none">$1195</h2>
+            </li>
+            <li>
+              <i class="fa-regular fa-eye" data-filter="16"></i>
+              <span>View Details</span>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="productName">
+            <h3>Balenciaga Runner bicolour sneakers</h3>
+          </div>
+          <div class="price_rating">
+            <h2>$1195</h2>
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="pagination">
+    <!-- <li class="page-item previous-page disable"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item current-page active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+          <li class="page-item current-page"><a class="page-link" href="#">5</a></li>
+          <li class="page-item current-page"><a class="page-link" href="#">6</a></li>
+          <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+          <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+          <li class="page-item next-page"><a class="page-link" href="#">Next</a></li> -->
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  ></script>
+  <script src="Menu.js"></script>
+</body>

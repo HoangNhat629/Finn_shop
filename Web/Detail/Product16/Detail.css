@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Gideon Roman", cursive;
+}
+body {
+  line-height: 1.5;
+}
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+.card-wrapper {
+  max-width: 992px;
+  margin: 50px auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.img-display {
+  overflow: hidden;
+}
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+  object-fit: cover;
+}
+.img-showcase img {
+  min-width: 100%;
+}
+.img-selected {
+  display: flex;
+}
+.img-item {
+  margin: 0.3rem;
+  width: 100%;
+  object-fit: cover;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+.img-item:hover {
+  opacity: 0.8;
+}
+.product-content {
+  padding: 2rem 1rem;
+}
+.product-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+.product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #11263a;
+}
+.product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #1fcad9;
+  color: #fff;
+  padding: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.product-link:hover {
+  opacity: 0.9;
+}
+.product-rating {
+  color: #ffc107;
+}
+.product-rating span {
+  font-weight: 600;
+  color: #252525;
+}
+.product-price {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.product-price span {
+  font-weight: 400;
+}
+
+.new-price span {
+  color: #256aff;
+}
+.product-detail h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+.product-detail p {
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+.purchase-info {
+  margin: 1.5rem 0;
+  display: grid;
+}
+
+.purchase-info .btn,
+.purchase-info select {
+  border: 1.5px solid #ddd;
+  text-align: center;
+  padding: 0.45rem 0.8rem;
+  outline: 0;
+  margin-right: 0.7rem;
+  margin-bottom: 1rem;
+}
+.purchase-info select option {
+  text-align: left;
+}
+select {
+  -webkit-appearance: none;
+}
+.purchase-info input {
+  width: 60px;
+}
+.purchase-info .btn {
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+}
+.purchase-info .btn:first-of-type {
+  background: #256eff;
+}
+.purchase-info .btn:last-of-type {
+  background: #6667ab;
+}
+.purchase-info .btn:hover {
+  opacity: 0.9;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.social-link a:hover {
+  background: #000;
+  border-color: transparent;
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-content {
+    padding-top: 80px;
+  }
+}
