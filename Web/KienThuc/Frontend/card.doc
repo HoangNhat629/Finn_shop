@@ -108,3 +108,37 @@ Thẻ	Mô tả chức năng
 <embed>	Dùng để nhúng một "tài liệu" nào đó vào trang web
 <object>	Dùng để nhúng một "tài liệu" nào đó vào trang web
 <section> Xác định một phần trong tài liệu
+
+12) Tags
+<fieldset> được sử dụng để nhóm các phần tử có liên quan trong một biểu mẫu ( Thẻ <fieldset>vẽ một hộp xung quanh các 
+           phần tử có liên quan ).
+           { Mẹo: Thẻ <legend> được sử dụng để xác định phụ đề cho <fieldset>phần tử. }
+<datalist> chỉ định danh sách các tùy chọn được xác định trước cho phần tử <input>.
+           Được sử dụng để cung cấp tính năng "tự động hoàn thành" cho các phần tử <input>. Người dùng sẽ thấy danh 
+           sách thả xuống các tùy chọn được xác định trước khi họ nhập dữ liệu.
+
+           Thuộc tính id của phần tử <datalist> phải bằng thuộc tính danh sách của phần tử <input> (điều này liên kết 
+           chúng với nhau).
+VD:
+<label for="browser">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<progress> thể hiện tiến độ hoàn thành của một nhiệm vụ.
+           (Mẹo: Luôn thêm thẻ <label> để có các phương pháp hỗ trợ tiếp cận tốt nhất!)         
+           VD: 
+           <label for="file">Downloading progress:</label>
+           <progress id="file" value="32" max="100"> 32% </progress>
+
+<source> được sử dụng để chỉ định nhiều tài nguyên phương tiện cho các phần tử phương 
+         tiện, chẳng hạn như <video> , <audio> và <picture> 
+
+<template> được sử dụng như một vùng chứa để giữ một số nội dung HTML bị ẩn khỏi người dùng khi tải trang.
+           (Nội dung bên trong <template>có thể được hiển thị sau đó bằng JavaScript.)

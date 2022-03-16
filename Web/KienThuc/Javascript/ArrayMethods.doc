@@ -1,0 +1,111 @@
+1, Array.map
+ [x1, x2, x3]
+  |   |   |
+ transform function
+  |   |   |
+ [y1, y2, y3]
+
+ VD: [1, 2, 5]
+      |  |  |
+       y=x^2
+      |  |  |
+     [1, 4, 25]
+Syntax: 
+ arr.map(function(item){
+    //transform
+    return newValue;
+ })
+
+2, Array.filter 
+    [x1, x2, x3, x4]
+      |  |  |  |
+   Filter function
+          |   
+       [x1, x4]
+ VD:
+    [1, 2, 3, 4]
+     |  |  |  |
+      x%2===0
+         |   
+      [2, 4]
+Syntax:
+ arr.filter(function(item){
+    //filter
+    return newValue;//true or false
+ })
+
+3, Array.find 
+    [x1, x2, x3, x4]
+      |  |  |  
+   Find function
+        |   
+        x3
+ VD:
+    [1, 2, 3, 4]
+     |  |  
+      x%2===0
+         |   
+         2
+Syntax:
+ arr.find(function(item){
+    //filter
+    return x;//true or false
+ })
+
+4. Array.reduce
+         [x1, x2, x3, x4]
+          |   |   |   |
+     reduce func  |   |
+            |     |   |
+         reduce func  | 
+               |      |
+              reduce func 
+                   |
+                 result
+ VD:
+        [1, 2, 3, 4]
+         |  |  |  |
+          sum  |  |
+            |  |  |   
+             sum  | 
+              |   | 
+               sum
+                |
+               10
+Syntax:
+ a.
+  arr.reduce(function(item1, item2) {
+    //calculation
+    return x;
+  })
+ b. có init thì vòng lặp đầu sẽ lấy init làm item1 và phần tử đầu của mảng làm item2 
+  arr.reduce(function(item1, item2) {
+    //calculation
+    return x;
+  },init)
+ vd: tính tổng giá trị tất cả các sp
+ var products = [{name: "A",quantity: 2, price:20},{name: "A",quantity: 5, price:90},{name: "A",quantity: 2, price:30}]
+ var total = products.reduce(function(currentTotal, product) {
+  return currentTotal + product.quantity*product.price;
+ }, 0);
+ console.log(total);
+
+5. Array.sort
+Syntax: arr.sort(function(a,b){ }) --> return a sorted arr
+ if sort function
+   return a value < 0
+     a will come before b
+   return a value > 0
+     a will come after b
+   return 0
+    a and b will stay unchanged
+
+ Vd: var a = [2,9,5,7,3,6];
+ //[2,3,5,6,7,9] ascending order
+ var b = a.sort(function (x,y){
+    //assume: a=2 b=3
+    //expect: a comes after b
+    return y-x;
+ })
+ console.log(b);
+

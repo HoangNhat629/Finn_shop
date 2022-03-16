@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col form-group">
+        <label for="genderFilter"> Gender</label>
+        <select class="form-group" id="genderFilter">
+          <option value="null">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <ul class="list-group" id="userList">
+      <!-- <li class="list-group-item">Mai</li>
+      <li class="list-group-item">Finn</li>
+      <li class="list-group-item">Lan</li>
+      <li class="list-group-item">Mari</li>
+      <li class="list-group-item">John</li>
+      <li class="list-group-item">Main</li> -->
+    </ul>
+    <script>
+      var users = [
+        { name: "Mai", gender: "Female" },
+        { name: "Finn", gender: "Male" },
+        { name: "Lan", gender: "Female" },
+        { name: "Mari", gender: "Female" },
+        { name: "John", gender: "Male" },
+        { name: "Main", gender: "Male" },
+      ];
+      var userList = $("#userList");
+      var genderFilter = $("#genderFilter");
+      render(userList, users);
+
+      genderFilter.on("change", function () {
+        var selectedGender = this.value;
+
+        if (selectedGender === "null") {
+          render(userList, users);
+        } else {
+          //filter
+          var filterUsers = users.filter(function (user) {
+            return user.gender === selectedGender;
+          });
+          render(userList, filterUsers);
+        }
+      });
+
+      function render(container, items) {
+        //map
+        var htmlItems = items.map(function (item) {
+          return '<li class="list-group-item">' + item.name + "</li>";
+        });
+        var html = htmlItems.join("");
+        container.html(html);
+      }
+    </script>
+  </body>
+</html>
